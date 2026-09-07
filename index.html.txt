@@ -1,3 +1,7 @@
+dap an trac Nghiem 
+cau1:c cau2:b cau3:a cau4:b cau5:b
+
+
 ----bai1---
 <?php
 for ($i = 1; $i <= 10; $i++) {
