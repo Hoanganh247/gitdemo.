@@ -1,0 +1,69 @@
+----bai1---
+<?php
+for ($i = 1; $i <= 10; $i++) {
+    if ($i % 2 == 0) {
+        echo $i . " ";
+    }
+}
+?>
+
+----bai2----
+ <?php
+function kiemTraSoNguyenTo($n) {
+    if ($n < 2) {
+        return false;
+    }
+    for ($i = 2; $i <= sqrt($n); $i++) { 
+        if ($n % $i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+$num = 17;
+if (kiemTraSoNguyenTo($num)) {
+    echo "$num là số nguyên tố.";
+} else {
+    echo "$num không phải là số nguyên tố.";
+}
+?>
+
+-----bai3----
+ <?php
+function inHinhChuNhat($chieuRong, $chieuCao) {
+    for ($i = 1; $i <= $chieuCao; $i++) {      
+        for ($j = 1; $j <= $chieuRong; $j++) { 
+            echo "* ";
+        }
+        echo "<br>";                           
+    }
+}
+inHinhChuNhat(5, 3);
+?>
+
+----bai4---
+<?php
+for ($i = 1; $i <= 100; $i++) {
+    echo $i . " ";
+}
+?>
+
+----bai5---
+<?php
+for ($i = 1; $i <= 100; $i++) {
+    if ($i % 2 == 0) {
+        echo "<b>$i</b> "; 
+    } else {
+        echo "$i ";        
+    }
+}
+?>
+
+---bai6---
+<?php
+$nam = array(1990, 1991, 1992, 1993, 1994, 1995);
+
+foreach ($nam as $value) {
+    echo $value . "<br>";
+}
+?>
