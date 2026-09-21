@@ -1,0 +1,39 @@
+<?php
+// 1. Tạo mảng kết hợp (mảng đa chiều) chứa danh sách các sản phẩm
+$products = [
+    [
+        "name" => "Nước giặt",
+        "price" => 500000,
+        "quantity" => 2
+    ],
+    [
+        "name" => "Dầu gội đầu",
+        "price" => 250000,
+        "quantity" => 3
+    ],
+    [
+        "name" => "Màn hình 24 inch",
+        "price" => 3200000,
+        "quantity" => 1
+    ]
+];
+
+// 2. Hàm hiển thị thông tin sản phẩm
+function displayProducts($products) {
+    echo "=== DANH SÁCH SẢN PHẨM ===\n";
+    foreach ($products as $index => $product) {
+        echo ($index + 1) . ". Tên: " . $product['name'] . "\n";
+        echo "   Giá: " . number_format($product['price']) . " VNĐ\n";
+        echo "   Số lượng: " . $product['quantity'] . "\n";
+        echo "---------------------------\n";
+    }
+}
+
+// 3. Hàm tính tổng giá trị của tất cả sản phẩm (price * quantity)
+function calculateTotalValue($products) {
+    $total = 0;
+    foreach ($products as $product) {
+        $total += $product['price'] * $product['quantity'];
+    }
+    return $total;
+}
